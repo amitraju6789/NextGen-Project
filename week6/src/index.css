@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f4f7fe;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+.app-container {
+  background: #ffffff;
+  width: 100%;
+  max-width: 480px;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h2 { color: #0d253f; }
+header p { color: #666; font-size: 0.85rem; }
+
+.balance-container {
+  background: #0d253f;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.inc-exp-container {
+  display: flex;
+  margin-top: 15px;
+  background: #fff;
+  color: #333;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.inc-exp-container > div { flex: 1; text-align: center; }
+.inc-exp-container > div:first-child { border-right: 1px solid #dedede; }
+
+.money { font-size: 1.1rem; font-weight: bold; margin-top: 5px; }
+.money.plus { color: #2ecc71; }
+.money.minus { color: #e74c3c; }
+
+.transaction-form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+
+input, select, button {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+}
+
+button[type="submit"] {
+  background-color: #0070f3;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover { background-color: #0051a8; }
+
+.filter-container { margin-bottom: 15px; font-size: 0.9rem; }
+
+.transaction-list { list-style: none; }
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border-right: 5px solid #ccc;
+  background: #fff;
+}
+
+.list-item.plus { border-right-color: #2ecc71; }
+.list-item.minus { border-right-color: #e74c3c; }
+
+.category-tag { color: #777; margin-left: 5px; font-size: 0.8rem; }
+.delete-btn { background: #e74c3c; color: white; border: none; padding: 4px 8px; font-size: 0.75rem; border-radius: 4px; cursor: pointer; margin-left: 8px; }
+.empty-msg { text-align: center; color: #888; font-size: 0.9rem; }

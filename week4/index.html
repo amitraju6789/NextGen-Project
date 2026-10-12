@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker - Advanced JS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker 💰</h1>
+            <p>Veda Technologies - Week 4 Task</p>
+        </header>
+
+        <!-- Balance Overview -->
+        <div class="balance-card">
+            <h3>Your Balance</h3>
+            <h1 id="totalBalance">$0.00</h1>
+            <div class="inc-exp-container">
+                <div class="inc-box">
+                    <h4>Income</h4>
+                    <p id="totalIncome" class="money plus">+$0.00</p>
+                </div>
+                <div class="exp-box">
+                    <h4>Expense</h4>
+                    <p id="totalExpense" class="money minus">-$0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Transaction Form -->
+        <section class="form-section">
+            <h3>Add New Transaction</h3>
+            <form id="transactionForm">
+                <input type="text" id="desc" placeholder="Transaction Title..." required>
+                <input type="number" id="amount" placeholder="Amount (Use - for expense, + for income)" step="0.01" required>
+                <select id="category">
+                    <option value="Salary">Salary / Income</option>
+                    <option value="Food">Food & Dining</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills & Utilities</option>
+                    <option value="Other">Other</option>
+                </select>
+                <button type="submit" class="btn">Add Transaction</button>
+            </form>
+        </section>
+
+        <!-- Search & Filter Section -->
+        <section class="filter-section">
+            <h3>Transaction History</h3>
+            <div class="filter-controls">
+                <input type="text" id="search" placeholder="Search transactions...">
+                <select id="filterCategory">
+                    <option value="All">All Categories</option>
+                    <option value="Salary">Salary</option>
+                    <option value="Food">Food</option>
+                    <option value="Shopping">Shopping</option>
+                    <option value="Bills">Bills</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </section>
+
+        <!-- Transaction List -->
+        <ul id="transactionList" class="list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
