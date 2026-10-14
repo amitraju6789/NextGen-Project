@@ -1,14 +1,444 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NEXAFLOW Admin Dashboard</title>
+    <title>NextGen Project — Full-Stack Engineering Hub (Weeks 1 to 15)</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   </head>
-  <body class="bg-slate-900 text-slate-100 antialiased">
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+  <body class="bg-slate-950 text-slate-100 antialiased min-h-screen">
+    <!-- Navbar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center shadow-lg shadow-blue-500/20 text-white font-bold text-lg">
+            NG
+          </div>
+          <div>
+            <h1 class="text-xl font-bold tracking-tight text-white">NextGen Full-Stack Project Hub</h1>
+            <p class="text-xs text-slate-400">Amit Kumar Singh • Complete Curriculum Weeks 1 — 15</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <a
+            href="https://github.com/amitraju6789/NextGen-Project"
+            target="_blank"
+            class="px-3.5 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-xs font-semibold text-slate-200 border border-slate-700 flex items-center gap-2 transition"
+          >
+            <i class="fab fa-github"></i> GitHub Repository
+          </a>
+          <a
+            href="https://week10-j7ttugeh0-portfolio-b5d9.vercel.app"
+            target="_blank"
+            class="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-xs font-semibold text-white shadow-lg shadow-blue-600/20 flex items-center gap-2 transition"
+          >
+            <i class="fas fa-external-link-alt"></i> Live Demo (Vercel)
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero / Summary Banner -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <section class="p-6 sm:p-8 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-blue-950/40 border border-slate-800 shadow-xl relative overflow-hidden">
+        <div class="relative z-10 max-w-3xl space-y-3">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            All 15 Weekly Modules Audited & Fully Functional
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+            Comprehensive Web Development & Backend Engineering Showcase
+          </h2>
+          <p class="text-sm text-slate-300 leading-relaxed">
+            Welcome to the centralized project dashboard containing all coursework, assignments, and production applications developed across 15 intensive weeks — spanning HTML5 semantic foundations, advanced CSS3 architectures, vanilla JavaScript ES6+, React 19 ecosystems, CI/CD automated deployments, and scalable Node.js & MongoDB backend APIs.
+          </p>
+        </div>
+      </section>
+
+      <!-- Stats Bar -->
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-xs text-slate-400 font-medium">Curriculum Scope</span>
+          <p class="text-2xl font-bold text-white mt-1">15 Weeks</p>
+          <span class="text-[11px] text-emerald-400">100% Complete & Tested</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-xs text-slate-400 font-medium">Frontend Projects</span>
+          <p class="text-2xl font-bold text-white mt-1">11 Apps</p>
+          <span class="text-[11px] text-blue-400">HTML5, CSS3, JS & React 19</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-xs text-slate-400 font-medium">Backend REST APIs</span>
+          <p class="text-2xl font-bold text-white mt-1">3 Servers</p>
+          <span class="text-[11px] text-purple-400">Node HTTP, Express & MongoDB</span>
+        </div>
+        <div class="p-4 rounded-xl bg-slate-900 border border-slate-800">
+          <span class="text-xs text-slate-400 font-medium">DevOps & Deployment</span>
+          <p class="text-2xl font-bold text-white mt-1">CI/CD & Docker</p>
+          <span class="text-[11px] text-cyan-400">GitHub Actions & Vercel Edge</span>
+        </div>
+      </section>
+
+      <!-- Projects Grid -->
+      <section class="space-y-4">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-800">
+          <h3 class="text-lg font-bold text-white flex items-center gap-2">
+            <i class="fas fa-layer-group text-blue-400"></i> Coursework Repository (Weeks 1 — 15)
+          </h3>
+          <span class="text-xs text-slate-400">Click any card below to open the project or documentation</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Week 1 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 01</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">Personal Portfolio Website</h4>
+              <p class="text-xs text-slate-400">Semantic HTML5 tags, tables, contact forms, navigation, and structured content hierarchy.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">HTML5</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Semantic Tags</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Forms & Tables</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week1/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week1/Readme.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 2 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 02</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">InnovateX Startup Landing Page</h4>
+              <p class="text-xs text-slate-400">Responsive CSS3 Grid & Flexbox, Box Model, sticky headers, media queries, and pricing tables.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">CSS3</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">CSS Grid</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Flexbox</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Responsive</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week2/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week2/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 3 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 03</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">TaskMaster To-Do App</h4>
+              <p class="text-xs text-slate-400">DOM operations, event handling, real-time search, status filtering, and dynamic array mutation.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">JavaScript</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">DOM Manipulation</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">ES6 Array Methods</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week3/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week3/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 4 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 04</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">Smart Expense Tracker</h4>
+              <p class="text-xs text-slate-400">LocalStorage persistence with simulated async promises, object destructuring, spread syntax, and reduce.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Async JS</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">LocalStorage</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Spread / Destructure</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week4/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week4/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 5 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 05</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">React Task Manager</h4>
+              <p class="text-xs text-slate-400">React 19 component hierarchy, props passing, state lifting, priority badges, and toggle handlers.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">React 19</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Vite</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Component State</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week5/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week5/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 6 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 06</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">React Hooks Expense Tracker</h4>
+              <p class="text-xs text-slate-400">Custom hook (`useLocalStorage`), `useState`, `useEffect`, dynamic category filters, and balance calculations.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">React Hooks</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Custom Hook</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">LocalStorage</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week6/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week6/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 7 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 07</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">Multi-Page Blog Application</h4>
+              <p class="text-xs text-slate-400">React Router v6 implementation, nested routing, dynamic URL parameters (`/blog/:id`), and 404 fallback page.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">React Router</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Dynamic Routes</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">SPA Navigation</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week7/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week7/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 8 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 08</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">CineSearch Movie Explorer</h4>
+              <p class="text-xs text-slate-400">OMDb API integration, asynchronous data fetching with fetch, query debouncing, spinner, and error retry states.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">API Integration</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Async / Await</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Error Handling</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week8/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week8/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 9 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 09</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">Modern E-Commerce Store</h4>
+              <p class="text-xs text-slate-400">React Context API, slide-in cart drawer, product quick view modal, category filtering, and toast alerts.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Context API</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Cart Drawer</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Product Modal</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week9/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week9/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 10 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-blue-500/40 hover:border-blue-400 transition flex flex-col justify-between group shadow-lg shadow-blue-500/5">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">WEEK 10</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-globe"></i> Live on Vercel</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">NEXAFLOW Admin Dashboard</h4>
+              <p class="text-xs text-slate-400">Enterprise operational dashboard with KPI metrics, Recharts telemetry charts, searchable order tables, and logs.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Tailwind CSS</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Recharts</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Lucide React</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week10/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open Local <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="https://week10-j7ttugeh0-portfolio-b5d9.vercel.app" target="_blank" class="font-semibold text-emerald-400 hover:text-emerald-300">
+                Live URL <i class="fas fa-external-link-alt text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Week 11 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">WEEK 11</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-check-circle"></i> Complete</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">Secure Auth & Validation</h4>
+              <p class="text-xs text-slate-400">Interactive Sign In / Sign Up system, live Regex email testing, dynamic password strength score, and criteria badges.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Regex Validation</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Strength Meter</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Tailwind</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week11/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week11/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 12 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-blue-500/40 hover:border-blue-400 transition flex flex-col justify-between group shadow-lg shadow-blue-500/5">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">WEEK 12</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-rocket"></i> Production CI/CD</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-blue-400 transition">Production Deployment Hub</h4>
+              <p class="text-xs text-slate-400">GitHub Actions CI/CD pipeline, Vercel edge deployment headers, multi-stage Alpine Dockerfile, and pipeline telemetry.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">GitHub Actions</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Docker</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Vercel Edge</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <a href="week12/dist/index.html" class="font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1">
+                Open App <i class="fas fa-arrow-right text-[10px]"></i>
+              </a>
+              <a href="week12/README.md" class="text-slate-400 hover:text-slate-200">README</a>
+            </div>
+          </div>
+
+          <!-- Week 13 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">WEEK 13</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-server"></i> Backend</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-purple-400 transition">Node.js Core HTTP Server</h4>
+              <p class="text-xs text-slate-400">Built-in Node.js `http.createServer`, modular route dispatching (`/`, `/about`, `/api/data`), and JSON response headers.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Node.js HTTP</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Custom Routing</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">JSON API</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-purple-300">npm start (Port 3000)</span>
+              <a href="week13/README.md" class="font-semibold text-blue-400 hover:text-blue-300">Docs</a>
+            </div>
+          </div>
+
+          <!-- Week 14 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">WEEK 14</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-server"></i> Backend</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-purple-400 transition">Express Task Management REST API</h4>
+              <p class="text-xs text-slate-400">Complete RESTful CRUD API with Express 5, in-memory collection storage, request body validation, and proper HTTP status codes.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Express.js</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Full CRUD</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">REST Codes</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-purple-300">npm start (Port 3000)</span>
+              <a href="week14/README.md" class="font-semibold text-blue-400 hover:text-blue-300">Docs</a>
+            </div>
+          </div>
+
+          <!-- Week 15 -->
+          <div class="p-5 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition flex flex-col justify-between group">
+            <div class="space-y-2.5">
+              <div class="flex items-center justify-between">
+                <span class="px-2.5 py-0.5 rounded text-[10px] font-mono font-bold bg-purple-500/10 text-purple-400 border border-purple-500/20">WEEK 15</span>
+                <span class="text-[11px] text-emerald-400 font-medium"><i class="fas fa-database"></i> Database</span>
+              </div>
+              <h4 class="text-base font-bold text-white group-hover:text-purple-400 transition">MongoDB & Mongoose Task API</h4>
+              <p class="text-xs text-slate-400">Production persistent CRUD database integration, strict Mongoose schema validation, `dotenv` configuration, and error handling.</p>
+              <div class="flex flex-wrap gap-1.5 pt-1">
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">MongoDB</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Mongoose</span>
+                <span class="px-2 py-0.5 rounded text-[10px] bg-slate-800 text-slate-300">Async / Await</span>
+              </div>
+            </div>
+            <div class="mt-4 pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
+              <span class="font-mono text-[11px] text-purple-300">npm start (MongoDB)</span>
+              <a href="week15/README.md" class="font-semibold text-blue-400 hover:text-blue-300">Docs</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="pt-8 pb-12 border-t border-slate-800/80 text-center text-xs text-slate-400 space-y-2">
+        <p>&copy; 2026 Amit Kumar Singh. All Rights Reserved. Built for NextGen Full-Stack Internship Program.</p>
+        <p>Verified with Git, GitHub Actions CI/CD & Vercel Edge Hosting.</p>
+      </footer>
+    </main>
   </body>
 </html>

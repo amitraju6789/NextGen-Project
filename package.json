@@ -1,25 +1,33 @@
 {
-  "name": "week10",
+  "name": "nextgen-project-monorepo",
+  "version": "1.0.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "description": "NextGen Project - Complete Full-Stack Web Development Coursework (Weeks 1 to 15)",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "oxlint",
-    "preview": "vite preview"
+    "test": "node -c week13/server.js && node -c week14/server.js && node -c week15/server.js",
+    "build:week5": "npm --prefix week5 run build",
+    "build:week6": "npm --prefix week6 run build",
+    "build:week7": "npm --prefix week7 run build",
+    "build:week8": "npm --prefix week8 run build",
+    "build:week9": "npm --prefix week9 run build",
+    "build:week10": "npm --prefix week10 run build",
+    "build:week11": "npm --prefix week11 run build",
+    "build:week12": "npm --prefix week12 run build",
+    "build:all": "npm run build:week5 && npm run build:week6 && npm run build:week7 && npm run build:week8 && npm run build:week9 && npm run build:week10 && npm run build:week11 && npm run build:week12"
   },
-  "dependencies": {
-    "lucide-react": "^1.53.0",
-    "react": "^19.2.8",
-    "react-dom": "^19.2.8",
-    "recharts": "^3.10.1"
-  },
-  "devDependencies": {
-    "@types/react": "^19.2.18",
-    "@types/react-dom": "^19.2.7",
-    "@vitejs/plugin-react": "^6.1.1",
-    "oxlint": "^1.81.0",
-    "vite": "^8.3.0"
-  }
+  "keywords": [
+    "nextgen",
+    "fullstack",
+    "html5",
+    "css3",
+    "javascript",
+    "react",
+    "vite",
+    "tailwind",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "Amit Kumar Singh",
+  "license": "ISC"
 }

@@ -1,0 +1,20 @@
+{
+  "name": "week15",
+  "version": "1.0.0",
+  "description": "MongoDB & Mongoose Database Integration for Task Management API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node -c server.js"
+  },
+  "keywords": ["mongodb", "mongoose", "express", "crud"],
+  "author": "Amit Kumar Singh",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.7",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.1"
+  }
+}

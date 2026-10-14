@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  week12-production:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: week12_production_deployment
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production

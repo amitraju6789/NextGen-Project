@@ -1,0 +1,15 @@
+{
+  "name": "week13",
+  "version": "1.0.0",
+  "description": "Node.js Core HTTP Server & Routing Fundamentals",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node -c server.js"
+  },
+  "keywords": ["node", "http", "routing"],
+  "author": "Amit Kumar Singh",
+  "license": "ISC",
+  "type": "commonjs"
+}

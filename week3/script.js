@@ -98,3 +98,11 @@ filterBtns.forEach(btn => {
         renderTasks();
     });
 });
+
+// Expose functions to window for inline onclick handlers
+window.toggleComplete = toggleComplete;
+window.editTask = editTask;
+window.deleteTask = deleteTask;
+
+// Initial render
+renderTasks();

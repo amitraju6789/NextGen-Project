@@ -128,4 +128,7 @@ formEl.addEventListener('submit', addTransaction);
 searchInput.addEventListener('input', renderList);
 filterCatEl.addEventListener('change', renderList);
 
+// Expose for inline onclick handlers
+window.removeTransaction = removeTransaction;
+
 init();
