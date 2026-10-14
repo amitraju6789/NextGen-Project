@@ -1,16 +1,65 @@
-# React + Vite
+# Week 08 — CineSearch Movie Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An interactive movie exploration and search web application built with **React 19**, **Vite**, and external REST API data fetching via the **OMDb API**, emphasizing asynchronous data streams, loading spinners, debounce queries, and resilient error recovery states.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌟 Key Features
+- **External REST API Integration:** Real-time communication with the OMDb API (`https://www.omdbapi.com/`).
+- **Interactive Search Bar:** Real-time query submission with query parameter encoding.
+- **Type Filter:** Filter media by category (**All**, **Movies**, **Series**, **Episodes**).
+- **Asynchronous Lifecycle Handling:**
+  - **Loading State:** Clean loading spinner during network requests.
+  - **Error Boundary State:** Descriptive error display with an interactive "Try Again" retry action.
+  - **Empty Results State:** Helpful fallback messaging when searches yield zero matches.
+- **Movie Poster Grid:** Responsive display of title, year, IMDb ID, media badge, and poster image.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack & Concepts
+- **React 19:** `useState`, `useEffect`, `useCallback` hook optimization.
+- **Async API Fetching:** Modern JavaScript `fetch` API wrapped in `try/catch/finally`.
+- **Environment Variables:** Dynamic API key management via `import.meta.env.VITE_OMDB_API_KEY`.
+- **Vite:** High-performance dev server and optimized production bundler.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 📁 Project Architecture
+```text
+src/
+├── components/
+│   ├── SearchBar.jsx          # Input form with search trigger
+│   ├── Filter.jsx             # Media type selector dropdown
+│   ├── MovieCard.jsx          # Individual film card with poster & meta
+│   ├── LoadingSpinner.jsx     # Animated loading indicator
+│   └── ErrorMessage.jsx       # Alert box with retry trigger
+├── App.jsx                    # Data fetching logic & state coordination
+├── App.css                    # Dark-themed cinematic styling
+└── main.jsx                   # Application entry
+```
+
+---
+
+## 💻 Getting Started
+1. Clone the repository and enter directory:
+   ```bash
+   cd week8
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Build for production:
+   ```bash
+   npm run build
+   ```
+
+---
+
+## 👤 Author
+- **Developer:** Amit Kumar Singh
+- **Coursework:** NextGen Full-Stack Web Development Program
